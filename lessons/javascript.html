@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lesson 3 — Making it do something (JavaScript)</title>
+    <link rel="stylesheet" href="/assets/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <a class="brand" href="/">codeing<span>.</span>dev</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav" aria-label="Lessons">
+        <a href="/">Home</a>
+        <a href="/lessons/html.html">HTML</a>
+        <a href="/lessons/css.html">CSS</a>
+        <a href="/lessons/javascript.html" class="is-active" aria-current="page">JavaScript</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <div class="article-header">
+        <p class="eyebrow">Lesson 3</p>
+        <h1>Making it do something</h1>
+        <p class="lede">
+          JavaScript is the behaviour of a page. It can read what the user did, remember a
+          value, and change the page in response — without a reload.
+        </p>
+      </div>
+
+      <article class="lesson">
+        <h2>A value and a name</h2>
+        <p>
+          <code>const</code> gives a name to a value you will not reassign; <code>let</code>
+          makes a name you can change later.
+        </p>
+        <pre><code>const lesson = 'JavaScript';
+let score = 0;
+score = score + 1;</code></pre>
+
+        <h2>Finding something on the page</h2>
+        <p>
+          <code>document.querySelector</code> takes a CSS selector — the same syntax you
+          learned in lesson 2 — and hands back the first matching element.
+        </p>
+        <pre><code>const feedback = document.querySelector('.quiz-feedback');</code></pre>
+
+        <h2>Reacting to a click</h2>
+        <p>
+          The function you pass to <code>addEventListener</code> runs every time the event
+          happens. This is exactly how the quizzes on these pages work.
+        </p>
+        <pre><code>button.addEventListener('click', () => {
+  feedback.textContent = 'You clicked it.';
+});</code></pre>
+
+        <h2>Changing what the user sees</h2>
+        <ul class="plain">
+          <li><code>element.textContent</code> — replace the text inside an element.</li>
+          <li><code>element.classList.add('is-correct')</code> — attach a CSS class.</li>
+          <li><code>element.setAttribute('aria-expanded', 'true')</code> — update an attribute.</li>
+        </ul>
+        <p>
+          Because you are only changing classes and text, all the real styling still lives
+          in CSS — the JavaScript just decides <em>when</em> it applies.
+        </p>
+
+        <h2>Try it</h2>
+        <p>
+          Answer the quiz below, then open <code>assets/app.js</code> and change the message
+          it shows when you are right. Save the file and answer again.
+        </p>
+
+        <div class="quiz" data-answer="a">
+          <p class="quiz-question">Which method runs your function when a button is clicked?</p>
+          <div class="quiz-options">
+            <button type="button" data-choice="a"><code>addEventListener</code></button>
+            <button type="button" data-choice="b"><code>querySelector</code></button>
+            <button type="button" data-choice="c"><code>textContent</code></button>
+          </div>
+          <p class="quiz-feedback" role="status"></p>
+        </div>
+      </article>
+
+      <nav class="pager" aria-label="Lesson navigation">
+        <a href="/lessons/css.html">← Previous: CSS</a>
+        <a href="/">Back to all lessons →</a>
+      </nav>
+    </main>
+
+    <footer class="site-footer">
+      <p>Built for learning. Everything here is a text file you can edit.</p>
+    </footer>
+
+    <script src="/assets/app.js" defer></script>
+  </body>
+</html>

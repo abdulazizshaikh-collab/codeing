@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>codeing.dev — learn to code, one page at a time</title>
+    <meta name="description" content="Three short beginner lessons on HTML, CSS and JavaScript. No setup, no accounts." />
+    <link rel="stylesheet" href="/assets/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <a class="brand" href="/">codeing<span>.</span>dev</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav" aria-label="Lessons">
+        <a href="/" class="is-active" aria-current="page">Home</a>
+        <a href="/lessons/html.html">HTML</a>
+        <a href="/lessons/css.html">CSS</a>
+        <a href="/lessons/javascript.html">JavaScript</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <p class="eyebrow">Beginner friendly</p>
+        <h1>Learn to code,<br />one small page at a time.</h1>
+        <p class="lede">
+          Three short lessons. No setup, no accounts — just read, tweak, and watch what changes.
+        </p>
+        <a class="button" href="/lessons/html.html">Start with lesson 1</a>
+      </section>
+
+      <section class="lessons" aria-labelledby="lessons-heading">
+        <h2 id="lessons-heading">The lessons</h2>
+        <ul class="card-grid">
+          <li class="card">
+            <p class="card-number">Lesson 1</p>
+            <h3><a href="/lessons/html.html">Words on a page</a></h3>
+            <p>HTML is the structure: headings, paragraphs, links and lists.</p>
+          </li>
+          <li class="card">
+            <p class="card-number">Lesson 2</p>
+            <h3><a href="/lessons/css.html">Making it look good</a></h3>
+            <p>CSS is the style: colour, spacing, size and the rules that decide it.</p>
+          </li>
+          <li class="card">
+            <p class="card-number">Lesson 3</p>
+            <h3><a href="/lessons/javascript.html">Making it do something</a></h3>
+            <p>JavaScript is the behaviour: reacting to a click and changing the page.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="note" aria-labelledby="note-heading">
+        <h2 id="note-heading">Try it yourself</h2>
+        <p>
+          This site is plain HTML, CSS and JavaScript — no build step. Open a file in
+          <code>lessons/</code> and change a word, then save. The page reloads and you can
+          see exactly what your edit did.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Built for learning. Everything here is a text file you can edit.</p>
+    </footer>
+
+    <script src="/assets/app.js" defer></script>
+  </body>
+</html>

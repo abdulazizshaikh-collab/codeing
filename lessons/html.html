@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lesson 1 — Words on a page (HTML)</title>
+    <link rel="stylesheet" href="/assets/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <a class="brand" href="/">codeing<span>.</span>dev</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav" aria-label="Lessons">
+        <a href="/">Home</a>
+        <a href="/lessons/html.html" class="is-active" aria-current="page">HTML</a>
+        <a href="/lessons/css.html">CSS</a>
+        <a href="/lessons/javascript.html">JavaScript</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <div class="article-header">
+        <p class="eyebrow">Lesson 1</p>
+        <h1>Words on a page</h1>
+        <p class="lede">
+          HTML is the structure of everything you read in a browser. It is text, wrapped
+          in labels called <strong>tags</strong>, and the browser turns it into a page.
+        </p>
+      </div>
+
+      <article class="lesson">
+        <h2>A tag is a label in angle brackets</h2>
+        <p>
+          Most tags come in pairs: an opening tag like <code>&lt;p&gt;</code> and a closing
+          tag like <code>&lt;/p&gt;</code>. Whatever sits between them is a piece of content
+          the browser knows how to treat.
+        </p>
+        <pre><code>&lt;p&gt;Hello, world.&lt;/p&gt;</code></pre>
+        <p>
+          That is a paragraph. Change the tag and you change the meaning — and the look —
+          without touching the words inside.
+        </p>
+
+        <h2>The handful you will use constantly</h2>
+        <ul class="plain">
+          <li><code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> — headings, from most to least important.</li>
+          <li><code>&lt;p&gt;</code> — a paragraph of text.</li>
+          <li><code>&lt;a href="..."&gt;</code> — a link to another page.</li>
+          <li><code>&lt;ul&gt;</code> and <code>&lt;li&gt;</code> — a bulleted list and its items.</li>
+          <li><code>&lt;img src="..." alt="..."&gt;</code> — an image, with a description for screen readers.</li>
+        </ul>
+
+        <h2>Tags nest like boxes</h2>
+        <p>
+          A page is a tree of elements. A list holds items, items hold text. Keep opening and
+          closing tags in order and the tree stays sane.
+        </p>
+        <pre><code>&lt;ul&gt;
+  &lt;li&gt;HTML&lt;/li&gt;
+  &lt;li&gt;CSS&lt;/li&gt;
+  &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+        <h2>Try it</h2>
+        <p>
+          Open <code>lessons/html.html</code> in your editor and rewrite the heading above.
+          Save the file, and this page will reload with your words in place of mine.
+        </p>
+
+        <div class="quiz" data-answer="b">
+          <p class="quiz-question">Which tag marks the most important heading on a page?</p>
+          <div class="quiz-options">
+            <button type="button" data-choice="a">&lt;head&gt;</button>
+            <button type="button" data-choice="b">&lt;h1&gt;</button>
+            <button type="button" data-choice="c">&lt;big&gt;</button>
+          </div>
+          <p class="quiz-feedback" role="status"></p>
+        </div>
+      </article>
+
+      <nav class="pager" aria-label="Lesson navigation">
+        <a href="/">← Back to lessons</a>
+        <a href="/lessons/css.html">Next: CSS →</a>
+      </nav>
+    </main>
+
+    <footer class="site-footer">
+      <p>Built for learning. Everything here is a text file you can edit.</p>
+    </footer>
+
+    <script src="/assets/app.js" defer></script>
+  </body>
+</html>

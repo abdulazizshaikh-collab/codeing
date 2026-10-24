@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lesson 2 — Making it look good (CSS)</title>
+    <link rel="stylesheet" href="/assets/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <a class="brand" href="/">codeing<span>.</span>dev</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav" aria-label="Lessons">
+        <a href="/">Home</a>
+        <a href="/lessons/html.html">HTML</a>
+        <a href="/lessons/css.html" class="is-active" aria-current="page">CSS</a>
+        <a href="/lessons/javascript.html">JavaScript</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <div class="article-header">
+        <p class="eyebrow">Lesson 2</p>
+        <h1>Making it look good</h1>
+        <p class="lede">
+          CSS decides how HTML looks: colour, size, spacing, and where things sit. It is a
+          list of rules, and every rule answers “which thing, what property, what value?”
+        </p>
+      </div>
+
+      <article class="lesson">
+        <h2>A rule has a selector and a body</h2>
+        <pre><code>p {
+  color: #2f6fed;
+  font-size: 18px;
+}</code></pre>
+        <p>
+          Read it as: <em>for every paragraph, make the text blue and the size 18 pixels.</em>
+          The part before the braces chooses elements; the inside describes the change.
+        </p>
+
+        <h2>Selectors pick the elements</h2>
+        <ul class="plain">
+          <li><code>p</code> — every paragraph.</li>
+          <li><code>.card</code> — everything with <code>class="card"</code>.</li>
+          <li><code>#main</code> — the one element with <code>id="main"</code>.</li>
+          <li><code>.card a</code> — links inside a card.</li>
+        </ul>
+
+        <h2>Boxes have edges</h2>
+        <p>
+          Every element is a box with content in the middle, then padding, a border, and
+          margin outside. Padding pushes the content away from its own border; margin pushes
+          neighbouring boxes away.
+        </p>
+        <pre><code>.card {
+  padding: 1.25rem;
+  border: 1px solid #e4e0d6;
+  border-radius: 14px;
+  margin-bottom: 1rem;
+}</code></pre>
+
+        <h2>Layout with one line</h2>
+        <p>
+          <code>display: flex</code> is the fastest way to put things side by side, and
+          <code>display: grid</code> with <code>auto-fit</code> lets cards wrap on their own
+          as the screen narrows.
+        </p>
+        <pre><code>.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1rem;
+}</code></pre>
+
+        <h2>Try it</h2>
+        <p>
+          Open <code>assets/style.css</code> and find the <code>--accent</code> variable near
+          the top. Change its value to any hex colour you like and save — links, buttons and
+          borders that use it will all follow.
+        </p>
+
+        <div class="quiz" data-answer="c">
+          <p class="quiz-question">In <code>.card { color: red; }</code>, what is the selector?</p>
+          <div class="quiz-options">
+            <button type="button" data-choice="a"><code>color</code></button>
+            <button type="button" data-choice="b"><code>red</code></button>
+            <button type="button" data-choice="c"><code>.card</code></button>
+          </div>
+          <p class="quiz-feedback" role="status"></p>
+        </div>
+      </article>
+
+      <nav class="pager" aria-label="Lesson navigation">
+        <a href="/lessons/html.html">← Previous: HTML</a>
+        <a href="/lessons/javascript.html">Next: JavaScript →</a>
+      </nav>
+    </main>
+
+    <footer class="site-footer">
+      <p>Built for learning. Everything here is a text file you can edit.</p>
+    </footer>
+
+    <script src="/assets/app.js" defer></script>
+  </body>
+</html>

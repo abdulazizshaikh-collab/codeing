@@ -1,0 +1,13 @@
+{
+  "name": "codeing",
+  "private": true,
+  "version": "1.0.0",
+  "description": "A small static site with three beginner coding lessons.",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0 --port 3000 --strictPort",
+    "start": "vite --host 0.0.0.0 --port 3000 --strictPort"
+  },
+  "devDependencies": {
+    "vite": "^7.0.0"
+  }
+}
